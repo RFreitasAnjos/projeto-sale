@@ -17,7 +17,7 @@ import lombok.Setter;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Livro")
+@Table(name = "Produto")
 @SQLRestriction("habilitado = true")
 public class Produto extends EntidadeAuditavel{
     
@@ -26,6 +26,9 @@ public class Produto extends EntidadeAuditavel{
 
     @Column(nullable = false)
     private String titulo;
+
+    @Column(nullable = false)
+    private String descricao;
 
     @Column(nullable = false)
     private Double preco;
